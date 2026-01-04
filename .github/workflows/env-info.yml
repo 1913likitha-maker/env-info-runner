@@ -1,0 +1,19 @@
+name: Environment Info on Self Hosted Runner
+
+on:
+    push:
+          branches:
+                  - main
+
+          jobs:
+              env-info:
+                    runs-on: self-hosted
+                          steps:
+                                  - name: Checkout repository
+                                            uses: actions/checkout@v4
+
+                                                    - name: Run environment info script
+                                                              run: |
+                                                                          echo "Executing on self-hosted runner"
+                                                                                    ./env-info.sh
+
