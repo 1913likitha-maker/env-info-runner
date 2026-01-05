@@ -7,7 +7,7 @@ on:
 
 jobs:
   env-info:
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: [self-hosted, lg]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
